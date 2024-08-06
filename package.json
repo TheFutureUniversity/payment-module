@@ -1,6 +1,6 @@
 {
   "name": "tfu-payment-module",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "This module provides all the components related to the payment module for tfu",
   "main": "dist/index.js",
   "types": "./dist/types.ts",

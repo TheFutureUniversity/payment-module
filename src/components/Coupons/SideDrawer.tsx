@@ -1,5 +1,5 @@
 //@ts-nocheck
-import { useState } from "react";
+import React, { useState } from "react";
 import { SheetContent } from "../ui/couponSheet"
 import { ScrollArea } from "../ui/scroll-area"
 import CouponTicket from "./CouponTicket"

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import YayModal from "./YayModal";
 
 export default function CouponTicket({ coupons, setOpenDrawer, setCouponSelected, setSelectedCoupon, setShowYayModal, showYayModal, selectedCoupon }: { coupons: any[] | undefined, setOpenDrawer: Function, setCouponSelected: Function, setSelectedCoupon: Function, setShowYayModal: Function, showYayModal: boolean, selectedCoupon: boolean }) {
 
-    const [appliedCoupon, setAppliedCoupon] = React.useState<any>();
+    const [appliedCoupon, setAppliedCoupon] = useState<any>();
     React.useEffect(() => {
         let timer: NodeJS.Timeout;
         let appliedTimer: NodeJS.Timeout;

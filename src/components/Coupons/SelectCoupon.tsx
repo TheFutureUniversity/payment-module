@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import SideDrawer from './SideDrawer'
 import { Sheet, SheetTrigger } from "../ui/couponSheet"
 
 export default function SelectCoupon({ coupons, originalOrderAmount, setCouponDiscount, setFinalCouponSelected, MAIN_BACKEND_API_URL }: { coupons: any[] | undefined, originalOrderAmount: number, setCouponDiscount: Function, setFinalCouponSelected: Function, MAIN_BACKEND_API_URL: string, }) {
-    const [openDrawer, setOpenDrawer] = React.useState<boolean>(false);
-    const [couponSelected, setCouponSelected] = React.useState<boolean>(false);
-    const [selectedCoupon, setSelectedCoupon] = React.useState<any>();
+    const [openDrawer, setOpenDrawer] = useState<boolean>(false);
+    const [couponSelected, setCouponSelected] = useState<boolean>(false);
+    const [selectedCoupon, setSelectedCoupon] = useState<any>();
     const calculateDiscount = (couponData: any,) => {
         originalOrderAmount = originalOrderAmount;
         let amount_after_discount = (originalOrderAmount - ((originalOrderAmount * couponData?.discountPercent) / 100));
